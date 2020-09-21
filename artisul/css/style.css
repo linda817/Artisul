@@ -106,6 +106,9 @@ thead{
 .botones{
     padding-left: 20%;
 }
+.botones-agregar{
+    margin-top: 40px;
+}
 
 .btn-secondary.btn-filter,.btn-secondary.btn-filter:hover,.btn-secondary.btn-filter:active{
     background-color: var(--azul)   ;

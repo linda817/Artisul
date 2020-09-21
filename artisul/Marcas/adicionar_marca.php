@@ -5,17 +5,17 @@ require_once ('../tablas/Marcas.php');
 require_once ('../tablas/Producto.php');
 require_once ('../tablas/Proveedor.php');
 
-$Marca = new Marca();
+$Categoria = new Categoria();
 
 $submit = $_POST['submit'];
 if($submit == 1){
     //Agregar
-    $Marca->idMarca = $_POST['idMarca'];
-    $Marca->nombreMarca = $_POST['nombreMarca'];
-    $Marca->estadoMarca = $_POST['estadoMarca'];
+    $Marca->idCategoria = $_POST['idCategoria'];
+    $Marca->nombreCategoria = $_POST['nombreCategoria'];
+    $Marca->estadoCategoria = $_POST['estadoCategoria'];
 
 
-    $agregar = $Marca->insertar();
+    $agregar = $Categoria->insertar();
 
     if($agregar == 0){
         header("Location: manejo_inventario.php");
@@ -48,68 +48,48 @@ if($submit == 1){
 
 
 <body>
-    <section id="add">
-        <div class="card mb-4">
-            <div class="card-header">
-                <span class="titulo-artisul font-weight-bold">Agregar Marca</span>
+<section id="add">
+    <div class="card mb-4">
+        <div class="card-header">
+            <span class="titulo-artisul font-weight-bold">Agregar Marca</span>
+        </div>
+</section>
+
+<section id="agregar">
+    <div class="container no-gutters manual-gutters">
+
+        <form name="agregar" id="agregar" action="" method="post">
+            <input type="hidden" name="submit" value="1">
+
+            <h2 class="titulo-azul general-margen">Información General</h2>
+
+
+            <div class="form-group col-md-3">
+                <label>Nombre</label>
+                <input type="text" name="nombreMarca" id="nombreMarca" class="form-control" required>
             </div>
-    </section>
 
-    <section id="agregar">
-        <div class="container no-gutters manual-gutters">
+            <div class="form-group col-md-6">
+                <label>Estado</label>
+                <select name="estadoMarca" id="estadoMarca" class="form-control">
+                    <option value="1">Activo</option>
+                    <option value="0">Inactivo</option>
+                </select>
+            </div>
 
-            <form name="agregar" id="agregar" action="" method="post">
-                    <input type="hidden" name="submit" value="1">
-
-                <div class="row">
-
-                    <div class="form-group col-md-6">
-                        <h2 class="titulo-azul general-margen">General</h2>
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label>ID</label>
-                            </div>
-                            <div class="col-9">
-                                <input type="text" name="codigo" id="codigo" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label>Nombre</label>
-                            </div>
-                            <div class="col-9">
-                                <input type="text" name="nombre" id="nombre" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label>Estado</label>
-                            <select name="estadoProducto" id="estadoProducto" class="form-control">
-                                <option value="1">Activo</option>
-                                <option value="0">Inactivo</option>
-                            </select>
-                        </div>
-
-
-            </form>
-
-
-
-                <div class="form-group botones">
-                    <button type="submit" class="btn btn-primary">Guardar Datos</button>
-                    <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
-                </div>
+            <div class="form-group botones-agregar">
+                <button type="submit" class="btn btn-primary">Guardar Datos</button>
+                <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
+            </div>
 
         </form>
 
-        </div>
-    </section>
+    </div>
+</section>
 
 
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </body>
 </html>

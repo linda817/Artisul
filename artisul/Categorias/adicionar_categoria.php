@@ -51,7 +51,7 @@ if($submit == 1){
     <section id="add">
         <div class="card mb-4">
             <div class="card-header">
-                <span class="titulo-artisul font-weight-bold">Agregar Categoria</span>
+                <span class="titulo-artisul font-weight-bold">Agregar Categoría</span>
             </div>
     </section>
 
@@ -61,43 +61,23 @@ if($submit == 1){
             <form name="agregar" id="agregar" action="" method="post">
                     <input type="hidden" name="submit" value="1">
 
-                <div class="row">
-
-                    <div class="form-group col-md-6">
-                        <h2 class="titulo-azul general-margen">General</h2>
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label>ID</label>
-                            </div>
-                            <div class="col-9">
-                                <input type="text" name="codigo" id="codigo" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label>Nombre</label>
-                            </div>
-                            <div class="col-9">
-                                <input type="text" name="nombre" id="nombre" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label>Estado</label>
-                            <select name="estadoCategoria" id="estadoCategoria" class="form-control">
-                                <option value="1">Activo</option>
-                                <option value="0">Inactivo</option>
-                            </select>
-                        </div>
+                        <h2 class="titulo-azul general-margen">Información General</h2>
 
 
-            </form>
+                                <div class="form-group col-md-3">
+                                    <label>Nombre</label>
+                                    <input type="text" name="nombreCategoria" id="nombreCategoria" class="form-control" required>
+                                </div>
 
+                                <div class="form-group col-md-6">
+                                    <label>Estado</label>
+                                    <select name="estadoCategoria" id="estadoCategoria" class="form-control">
+                                        <option value="1">Activo</option>
+                                        <option value="0">Inactivo</option>
+                                    </select>
+                                </div>
 
-
-                <div class="form-group botones">
+                <div class="form-group botones-agregar">
                     <button type="submit" class="btn btn-primary">Guardar Datos</button>
                     <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
                 </div>
