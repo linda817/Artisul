@@ -7,7 +7,7 @@ public $nombreProducto;
 public $costoProducto;
 public $descripcionProducto;
 public $cantidadProducto;
-public $fechaRegistrol;
+public $fechaRegistro;
 public $idProveedor;
 public $idCategoria;
 public $idMarca;

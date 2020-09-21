@@ -71,19 +71,10 @@ if($submit == 1){
 
                         <div class="row">
                             <div class="col-3">
-                                <label>ID</label>
-                            </div>
-                            <div class="col-9">
-                                <input type="text" name="codigo" id="codigo" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-3">
                                 <label>Nombre</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" name="nombre" id="nombre" class="form-control">
+                                <input type="text" name="nombreProducto" id="nombreProducto" class="form-control">
                             </div>
                         </div>
 
@@ -92,7 +83,7 @@ if($submit == 1){
                                 <label>Marca</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" name="marca" id="marca" class="form-control">
+                                <input type="text" name="idMarca" id="idMarca" class="form-control">
                             </div>
                         </div>
 
@@ -101,7 +92,7 @@ if($submit == 1){
                                 <label>Categoría</label>
                             </div>
                             <div class="col-9">
-                                <select name="categoria" id="categoria" class="form-control">
+                                <select name="idCategoria" id="idCategoria" class="form-control">
 
                                     <?php
                                     //Aqui es para que aparezcan en listado todas las categorias.
@@ -125,7 +116,7 @@ if($submit == 1){
                                 <label>Descripción</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" name="descripcion" id="descripcion" class="form-control">
+                                <input type="text" name="descripcionProducto" id="descripcionProducto" class="form-control">
                             </div>
                         </div>
 
@@ -148,7 +139,7 @@ if($submit == 1){
 
 
 
-            <form name="agregar" id="agregar" action="" method="post">
+            <form name="agregar" id="agregar" action="" method="post" class="costo">
                 <input type="hidden" name="submit" value="1">
 
                     <div class="row">
@@ -161,7 +152,7 @@ if($submit == 1){
                                     <label>Costo</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="number" name="costo" id="costo" class="form-control">
+                                    <input type="number" name="costoProducto" id="costoProducto" class="form-control">
                                 </div>
                             </div>
 
@@ -170,7 +161,7 @@ if($submit == 1){
                                     <label>Proveedor</label>
                                 </div>
                                 <div class="col-9">
-                                    <select name="proveedor" id="proveedor" class="form-control">
+                                    <select name="idProveedor" id="idProveedor" class="form-control">
 
                                         <?php
                                         //Aqui es para que aparezcan en listado todos los proveedores.
@@ -192,22 +183,28 @@ if($submit == 1){
                                     <label>Cantidad</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="number" name="cantidad" id="cantidad" class="form-control">
+                                    <input type="number" name="cantidadProducto" id="cantidadProducto" class="form-control">
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="form-group botones">
-                    <button type="submit" class="btn btn-primary">Guardar Datos</button>
-                    <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
-                </div>
+
 
         </form>
 
         </div>
+
+        <div class="form-group botones-agregar-producto">
+            <button type="submit" class="btn btn-primary">Guardar Datos</button>
+            <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
+        </div>
+
     </section>
+
+
+
 
 
     <script src="../js/jquery.min.js"></script>

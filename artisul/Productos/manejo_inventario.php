@@ -29,22 +29,14 @@
                     </div>
                     <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
                 </div>
-                <div class="input-group" >
+                <div class="input-group">
                     <div class="input-group-btn" >
                         <button type="button" class="btn btn-secondary btn-filter dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" ><span class="label-icon" >Filter by</span> <span class="caret" >&nbsp;</span></button>
-                        <div class="dropdown-menu" >
-                            <ul class="category_filters" >
-                                <li>
-                                <label for="all">Marca</label>
-                                </li>
-                                <li>
-                                    <label class="category-label" for="Design" >Categoría</label>
-                                </li>
-                                <li>
-                                   <label class="category-label" for="Marketing" >Proveedor</label>
-                                </li>
-                            </ul>
+                                aria-haspopup="true" aria-expanded="false" ><span class="label-icon" >Administrar</span> <span class="caret" >&nbsp;</span></button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Marcas</a>
+                            <a class="dropdown-item" href="#">Categorías</a>
+                            <a class="dropdown-item" href="#">Proveedores</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +80,7 @@
                 <td>Prismacolor</td>
                 <td>Colores</td>
                 <td>13</td>
-                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar_producto.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             <tr>
                 <td>Mix Media 120 Pages Canson Sketch
@@ -98,7 +90,7 @@
                 <td>Canson</td>
                 <td>Sketchbooks</td>
                 <td>9</td>
-                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar_producto.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             <tr>
                 <td>Prismacolor Colored Pencils 12</td>
@@ -107,7 +99,7 @@
                 <td>Prismacolor</td>
                 <td>Colores</td>
                 <td>13</td>
-                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar_producto.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             <tr>
                 <td>Mix Media 120 Pages Canson Sketch
@@ -117,7 +109,7 @@
                 <td>Canson</td>
                 <td>Sketchbooks</td>
                 <td>9</td>
-                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar_producto.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             </tbody>
         </table>

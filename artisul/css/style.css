@@ -109,7 +109,17 @@ thead{
 .botones-agregar{
     margin-top: 40px;
 }
-
+.botones-agregar-producto{
+    margin-top: 80px;
+    margin-right: 40px;
+    float: right;
+}
+.form-group .row{
+    margin-top: 20px;
+}
+.costo{
+    margin-top: 50px;
+}
 .btn-secondary.btn-filter,.btn-secondary.btn-filter:hover,.btn-secondary.btn-filter:active{
     background-color: var(--azul)   ;
     border: none;
