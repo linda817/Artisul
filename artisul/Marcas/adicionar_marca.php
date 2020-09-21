@@ -41,7 +41,7 @@ if($submit == 1){
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><img src="../img/logo%20artisul-8.png" alt="Logo"></a>
+            <a class="navbar-brand" href="../Productos/manejo_inventario.php"><img src="../img/logo%20artisul-8.png" alt="Logo"></a>
         </nav>
     </div>
 </header>
