@@ -88,7 +88,7 @@
                 <td>Prismacolor</td>
                 <td>Colores</td>
                 <td>13</td>
-                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             <tr>
                 <td>Mix Media 120 Pages Canson Sketch
@@ -98,7 +98,7 @@
                 <td>Canson</td>
                 <td>Sketchbooks</td>
                 <td>9</td>
-                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             <tr>
                 <td>Prismacolor Colored Pencils 12</td>
@@ -107,7 +107,7 @@
                 <td>Prismacolor</td>
                 <td>Colores</td>
                 <td>13</td>
-                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             <tr>
                 <td>Mix Media 120 Pages Canson Sketch
@@ -117,7 +117,7 @@
                 <td>Canson</td>
                 <td>Sketchbooks</td>
                 <td>9</td>
-                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+                <td><a href="editar.php"><i class="fas fa-pen-square edit-icon"></i></a><td>
             </tr>
             </tbody>
         </table>
