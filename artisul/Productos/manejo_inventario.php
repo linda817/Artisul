@@ -34,7 +34,7 @@
                         <button type="button" class="btn btn-secondary btn-filter dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" ><span class="label-icon" >Administrar</span> <span class="caret" >&nbsp;</span></button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Marcas</a>
+                            <a class="dropdown-item" href="../Marcas/index.php">Marcas</a>
                             <a class="dropdown-item" href="#">Categorías</a>
                             <a class="dropdown-item" href="#">Proveedores</a>
                         </div>
