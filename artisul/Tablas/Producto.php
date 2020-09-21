@@ -69,7 +69,7 @@ public $idMarca;
                   from productos p
                   inner join productos_proveedores pr on pr.idProveedor = p.idProveedor
                   inner join productos_marcas m on m.idMarca = p.idMarca
-                  inner join productos_categorias tp on tp.idCategoria = p.idCategoria";
+                  inner join productos_categoria tp on tp.idCategirua = p.idCategoria";
         $sql = fn_EjecutarQuery($query);
 
         while ( $sRow = fn_ExtraerQuery($sql) ){

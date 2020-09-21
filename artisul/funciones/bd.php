@@ -2,7 +2,7 @@
 
 function fn_ConectarBD()
 {
-    $dbhost = "localhost";
+    $dbhost = "127.0.0.2";
     $dbuser = "root";
     $dbpass = "Pass123.";
     $db = "artisul";

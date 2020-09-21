@@ -1,11 +1,4 @@
 <?php
-require_once ('../Tablas/Producto.php');
-
-$Producto = new Producto();
-
-$listado = $Producto->listado();
-
-print_r($listado);
 
 ?>
 <!doctype html>
@@ -79,41 +72,62 @@ print_r($listado);
             <tr>
                 <th scope="col">Nombre</th>
                 <th scope="col">Costo</th>
-                <th scope="col">Descripción</th>
+                <th scope="col">Estatus</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Categoría</th>
                 <th scope="col">Cantidad</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
-            <?php
-                foreach ($listado as $key){
-            ?>
-                <tr>
-                    <td><?php echo $key["nombreProducto"] ?></td>
-                    <td><?php echo $key["costoProducto"] ?></td>
-                    <td><?php echo $key["descripcionProducto"] ?></td>
-                    <td><?php echo $key["nombreMarca"] ?></td>
-                    <td><?php echo $key["nombreCategoria"] ?></td>
-                    <td><?php echo $key["cantidadProducto"] ?></td>
-                    <td>
-                        <a href="editar.php?id=<?php echo $key['idProducto']?>">
-                            <i class="fa fa-edit"></i>
-                        </a>
-                    </td>
-                </tr>
-            <?php
-                }
-            ?>
+            <tr>
+                <td>Prismacolor Colored Pencils 12</td>
+                <td>900.00</td>
+                <td>Disponible</td>
+                <td>Prismacolor</td>
+                <td>Colores</td>
+                <td>13</td>
+                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+            </tr>
+            <tr>
+                <td>Mix Media 120 Pages Canson Sketch
+                    Book</td>
+                <td>520.00</td>
+                <td>Disponible</td>
+                <td>Canson</td>
+                <td>Sketchbooks</td>
+                <td>9</td>
+                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+            </tr>
+            <tr>
+                <td>Prismacolor Colored Pencils 12</td>
+                <td>900.00</td>
+                <td>Disponible</td>
+                <td>Prismacolor</td>
+                <td>Colores</td>
+                <td>13</td>
+                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+            </tr>
+            <tr>
+                <td>Mix Media 120 Pages Canson Sketch
+                    Book</td>
+                <td>520.00</td>
+                <td>Disponible</td>
+                <td>Canson</td>
+                <td>Sketchbooks</td>
+                <td>9</td>
+                <td><a href="#"><i class="fas fa-pen-square edit-icon"></i></a><td>
+            </tr>
             </tbody>
         </table>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="../js/scripts.js"></script>
+
+
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
