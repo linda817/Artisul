@@ -70,10 +70,11 @@ $listado = $Proveedor->obtener();
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th></th>
                     <th>Código</th>
                     <th>Nombre</th>
                     <th>Estado</th>
+                    <th>Fecha Registro</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -81,14 +82,14 @@ $listado = $Proveedor->obtener();
                 /*foreach ($listado as $item){
             ?>
                 <tr>
-                    <td>
-                        <a href="editar_proveedor.php?id=<?php echo $item["idProveedor"]?>">
-                            <i class="fa fa-edit"></i>
-                        </a>
-                    </td>
                     <td><?php echo $item['idProveedor'] ?></td>
                     <td><?php echo $item['nombreProveedor'] ?></td>
                     <td><?php echo $item['estadoProveedor'] ?></td>
+                  <td>
+                    <a href="editar_proveedor.php?id=<?= $key["idProveedor"]?>">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                   </td>
                 </tr>
             <?php
                 }*/

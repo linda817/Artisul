@@ -70,10 +70,11 @@ $listado = $Marcas->obtener();
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th></th>
                     <th>Código</th>
                     <th>Nombre</th>
                     <th>Estado</th>
+                    <th>Fecha Registro</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -81,14 +82,14 @@ $listado = $Marcas->obtener();
                 /*foreach ($listado as $item){
             ?>
                 <tr>
-                    <td>
-                        <a href="editar_marca.php?id=<?php echo $item["idMarca"]?>">
-                            <i class="fa fa-edit"></i>
-                        </a>
-                    </td>
                     <td><?php echo $item['idMarca'] ?></td>
                     <td><?php echo $item['nombreMarca'] ?></td>
                     <td><?php echo $item['estadoMarca'] ?></td>
+                 <td>
+                    <a href="editar_marca.php?id=<?= $key["idMarca"]?>">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                   </td>
                 </tr>
             <?php
                 }*/

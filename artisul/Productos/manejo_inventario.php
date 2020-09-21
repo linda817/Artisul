@@ -41,8 +41,8 @@ $lista = $Producto->listado();
                                 aria-haspopup="true" aria-expanded="false" ><span class="label-icon" >Administrar</span> <span class="caret" >&nbsp;</span></button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" href="../Marcas/index.php">Marcas</a>
-                            <a class="dropdown-item" href="#">Categorías</a>
-                            <a class="dropdown-item" href="#">Proveedores</a>
+                            <a class="dropdown-item" href="../Categorias/index.php">Categorías</a>
+                            <a class="dropdown-item" href="../Proveedores/index.php">Proveedores</a>
                         </div>
                     </div>
                 </div>

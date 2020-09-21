@@ -70,10 +70,11 @@ $listado = $Categorias->obtener();
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th></th>
                     <th>Código</th>
                     <th>Nombre</th>
                     <th>Estado</th>
+                    <th>Fecha Registro</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -81,14 +82,14 @@ $listado = $Categorias->obtener();
                 /*foreach ($listado as $item){
             ?>
                 <tr>
-                    <td>
-                        <a href="editar_categoria.php?id=<?php echo $item["idCategoria"]?>">
-                            <i class="fa fa-edit"></i>
-                        </a>
-                    </td>
                     <td><?php echo $item['idCategoria'] ?></td>
                     <td><?php echo $item['nombreCategoria'] ?></td>
                     <td><?php echo $item['estadoCategoria'] ?></td>
+                 <td>
+                    <a href="editar_categoria.php?id=<?= $key["idCategoria"]?>">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                   </td>
                 </tr>
             <?php
                 }*/
