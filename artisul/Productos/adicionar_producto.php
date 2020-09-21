@@ -1,13 +1,16 @@
 <?php
-/*
-require_once ('../tablas/Categoria.php');
-require_once ('../tablas/Marcas.php');
-require_once ('../tablas/Producto.php');
-require_once ('../tablas/Proveedor.php');
+
+require_once ('../Tablas/Categoria.php');
+require_once ('../Tablas/Marcas.php');
+require_once ('../Tablas/Producto.php');
+require_once ('../Tablas/Proveedor.php');
 
 $Producto = new Producto();
 
-$submit = $_POST['submit'];
+$submit = 0;
+if (isset($_POST['submit'])){
+    $submit = $_POST['submit'];
+}
 if($submit == 1){
     //Agregar
     $Producto->nombreProducto = $_POST['nombreProducto'];
@@ -20,12 +23,14 @@ if($submit == 1){
 
     $agregar = $Producto->insertar();
 
+    exit();
+
     if($agregar == 0){
         header("Location: manejo_inventario.php");
     }
 
 }
-*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,7 +79,7 @@ if($submit == 1){
                                 <label>Nombre</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" name="nombreProducto" id="nombreProducto" class="form-control">
+                                <input type="text" name="nombreProducto" id="nombreProducto" class="form-control" required>
                             </div>
                         </div>
 
@@ -83,7 +88,20 @@ if($submit == 1){
                                 <label>Marca</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" name="idMarca" id="idMarca" class="form-control">
+                                <select name="idMarca" id="idMarca" class="form-control">
+
+                                    <?php
+                                    //Aqui es para que aparezcan en listado todas las categorias.
+                                    $Marca = new Marcas();
+                                    $listado = $Marca->listadoCombo();
+                                    foreach ($listado as $item){
+                                        ?>
+                                        <option value="<?=$item['idMarca']?>"><?=$item['nombreMarca']?></option>
+                                    <?php
+                                        }
+                                    ?>
+
+                                </select>
                             </div>
                         </div>
 
