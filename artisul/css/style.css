@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;200;500;700&display=swap');
+
+:root{
+    --azul:#1A4B93;
+    --blanco-azul: #F1FFFF;
+    --gris: #68615F;
+    --grisclaro: #B2B2B2;
+    --grisoscuro: #423E3E;
+    --verde: #00B998;
+    --rojo: #E00F33;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: var(--grisclaro) !important;
+}
+header{
+    background-color:  var(--azul);
+}
+header img{
+    margin-right: 150px;
+}
+.bg-light{
+    background-color:  var(--azul) !important;
+}
+.card{
+    margin-bottom: 0 !important;
+}
+.input-group-text{
+    color: var(--azul) !important;
+}
+.input-group-text{
+    border-radius: 50%;
+}
+.btn-add{
+    background-color: var(--verde);
+    border: none;
+    padding: 10px 25px ;
+    border-radius: 0 !important;
+}
+thead{
+    background-color: #8DB8DB;
+    color: var(--grisoscuro);
+}
+.table-striped tbody tr:nth-of-type(2n+1){
+    background-color: #B9D9EA;
+}
+.titulo-artisul{
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.edit-icon{
+    color: var(--verde);
+}
+.table{
+    color: var(--gris);
+}
+#login{
+    background-color: var(--azul);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-check-label{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+}
+.form-check-input{
+    position: relative;
+}
+.input-group-btn{
+    background-color: var(--azul);
+}
+.dropdown-menu li{
+    list-style: none;
+}
+.btn-secondary.btn-filter,.btn-secondary.btn-filter:hover,.btn-secondary.btn-filter:active{
+    background-color: var(--azul)   ;
+    border: none;
+}
+
+.logo_1{
+    padding-top: 90px;
+    padding-left: 500px;
+}
+.search{
+    padding-top: 90px;
+    padding-right: 400px;
+}
+#productos{
+    padding-top: 80px;
+    text-align: center;
+    color: #000;
+    font-size: 40px;
+    padding-left: -40px;
+    padding-right: -40px;
+}
+
+#productos img{
+
+    max-height: 300px;
+}
+
+
+#productos h3{
+font-size: 20px;
+}
+
+.prod{
+    padding-top: 50px;
+
+}
+
+/*ANA PART
+Front End*/
+#front-end{
+    background-color: #F7F7F7;
+    padding-bottom: 8px;
+}
+.logo_2{
+    margin-top: -25px;
+}
+.s-border{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 13px;
+    padding-left: 15px;
+}
+.prod .col-md-4:hover{
+    border-style: solid;
+    border-color: var(--azul);
+    border-width: 1px;
+    color: var(--azul);
+}
+
+
+/*Manejo inventario*/
+.titulo-azul{
+    color: var(--azul);
+    font-weight: bold;
+    padding-top: 10px;
+}
+#agregar label{
+    color: var(--gris);
+    font-size: 19px;
+    font-weight: bold;
+}
+.manual-gutters{
+    margin-left: 5%;
+}
+.manual-gutters2{
+    padding-left: 20%;
+}
+#agregar input{
+    margin: 6px 0px;
+    border-radius: 0px;
+    font-size: 15px;
+}
+
+.margin-modif{
+    margin-top: -100px;
+}
+
+#save-cancelar{
+    text-align: right;
+}
+#save-cancelar .btn{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#save-cancelar .save{
+    margin-right: 26px;
+}
+#save-cancelar .cancelar{
+    margin-right: 20px;
+    background-color: var(--blanco-azul) !important;
+    color: var(--verde);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--verde) !important;
+}
+#save-cancelar .cancelar.btn-add:hover{
+    background-color: var(--azul) !important;
+    color: var(--blanco-azul) !important;
+    border-color: var(--azul) !important;
+}
+#agregar .clear{
+    background-color: var(--blanco-azul) !important;
+    color: var(--verde);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--verde) !important;
+    margin-left: 20px;
+}
+#agregar .clear.btn-add:hover{
+    background-color: var(--azul) !important;
+    color: var(--blanco-azul) !important;
+    border-color: var(--azul) !important;
+}
+
+/* peis */
+
+.btn-primary{
+    background-color: var(--verde);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 0 !important;
+}
+.btn-dark:hover{
+    background-color: var(--azul) !important;
+    color: var(--blanco-azul) !important;
+    border-color: var(--azul) !important;
+}
+
+.btn-dark{
+    background-color: var(--blanco-azul) !important;
+    color: var(--verde);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--verde) !important;
+    margin-left: 20px;
+    border-radius: 0;
+}
+
+.botones{
+    padding-left: 20%;
+}
