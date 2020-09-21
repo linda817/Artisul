@@ -74,6 +74,7 @@ $lista = $Producto->listado();
                 <th scope="col">Marca</th>
                 <th scope="col">Categoría</th>
                 <th scope="col">Cantidad</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
