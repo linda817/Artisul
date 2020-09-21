@@ -79,7 +79,7 @@ if($submit == 1){
 
             <div class="form-group botones-agregar">
                 <button type="submit" class="btn btn-primary">Guardar Datos</button>
-                <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
+                <a href="../Marcas/index.php" class="btn btn-dark">Cancelar</a>
             </div>
 
         </form>
