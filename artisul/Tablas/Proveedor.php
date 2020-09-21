@@ -36,6 +36,7 @@ class Proveedor
         $query = "select * from productos_proveedores ";
         $sql = fn_EjecutarQuery($query);
 
+        $datos = array();
         while ( $sRow = fn_ExtraerQuery($sql) ){
             $datos[] = $sRow;
         }

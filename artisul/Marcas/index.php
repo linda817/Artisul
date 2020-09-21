@@ -1,12 +1,12 @@
 <?php
-/*
-require_once ('../tablas/Marcas.php');
+
+require_once ('../Tablas/Marcas.php');
 
 $Marcas = new Marcas();
 
 $listado = $Marcas->obtener();
 
-*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +70,6 @@ $listado = $Marcas->obtener();
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Código</th>
                     <th>Nombre</th>
                     <th>Estado</th>
                     <th>Fecha Registro</th>
@@ -78,22 +77,22 @@ $listado = $Marcas->obtener();
                 </tr>
                 </thead>
                 <tbody>
-                <?php
-                /*foreach ($listado as $item){
+            <?php
+                foreach ($listado as $item){
             ?>
                 <tr>
-                    <td><?php echo $item['idMarca'] ?></td>
                     <td><?php echo $item['nombreMarca'] ?></td>
                     <td><?php echo $item['estadoMarca'] ?></td>
+                    <td><?php echo $item['fechaRegistro'] ?></td>
                  <td>
-                    <a href="editar_marca.php?id=<?= $key["idMarca"]?>">
+                    <a href="editar_marca.php?id=<?= $item["idMarca"]?>">
                         <i class="fa fa-edit"></i>
                     </a>
                    </td>
                 </tr>
             <?php
-                }*/
-                ?>
+                }
+            ?>
                 </tbody>
             </table>
 </section>

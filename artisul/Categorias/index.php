@@ -1,12 +1,12 @@
 <?php
-/*
-require_once ('../tablas/Categoria.php');
 
-$Categorias = new Categorias();
+require_once ('../Tablas/Categoria.php');
 
-$listado = $Categorias->obtener();
+$Categoria = new Categoria();
 
-*/
+$listado = $Categoria->obtener();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +56,7 @@ $listado = $Categorias->obtener();
 <section id="marcas-index">
     <div class="card mb-4">
         <div class="card-header">
-            <span class="titulo-artisul">Proveedores</span>
+            <span class="titulo-artisul">Categorías</span>
             <div class="float-right">
                 <a href="adicionar_categoria.php" class="btn btn-primary btn-add">
                     ADD
@@ -70,7 +70,6 @@ $listado = $Categorias->obtener();
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Código</th>
                     <th>Nombre</th>
                     <th>Estado</th>
                     <th>Fecha Registro</th>
@@ -78,22 +77,22 @@ $listado = $Categorias->obtener();
                 </tr>
                 </thead>
                 <tbody>
-                <?php
-                /*foreach ($listado as $item){
+            <?php
+                foreach ($listado as $item){
             ?>
                 <tr>
-                    <td><?php echo $item['idCategoria'] ?></td>
                     <td><?php echo $item['nombreCategoria'] ?></td>
                     <td><?php echo $item['estadoCategoria'] ?></td>
+                    <td><?php echo $item['fechaRegistro'] ?></td>
                  <td>
-                    <a href="editar_categoria.php?id=<?= $key["idCategoria"]?>">
+                    <a href="editar_categoria.php?id=<?= $item["idCategoria"]?>">
                         <i class="fa fa-edit"></i>
                     </a>
                    </td>
                 </tr>
             <?php
-                }*/
-                ?>
+                }
+            ?>
                 </tbody>
             </table>
 </section>
