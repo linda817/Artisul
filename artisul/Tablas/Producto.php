@@ -2,15 +2,15 @@
 require_once ('../funciones/bd.php');
 
 class Producto {
-public $idProducto;
-public $nombreProducto;
-public $costoProducto;
-public $descripcionProducto;
-public $cantidadProducto;
-public $fechaRegistro;
-public $idProveedor;
-public $idCategoria;
-public $idMarca;
+    public $idProducto;
+    public $nombreProducto;
+    public $costoProducto;
+    public $descripcionProducto;
+    public $cantidadProducto;
+    public $fechaRegistrol;
+    public $idProveedor;
+    public $idCategoria;
+    public $idMarca;
 
 //funciones para la base de datos//
 
@@ -62,16 +62,17 @@ public $idMarca;
     }
 
     function listado() {
-        $query = "select p.idProducto, p.nombreProducto, p.costoProducto,p.descripcionProducto, p.cantidadProducto,
+        $query = "select p.idProducto, p.nombreProducto, p.costoProducto, p.descripcionProducto, p.cantidadProducto,
                   pr.idProveedor, pr.nombreProveedor, 
                   m.idMarca, m.nombreMarca,
                   tp.idCategoria, tp.nombreCategoria
                   from productos p
                   inner join productos_proveedores pr on pr.idProveedor = p.idProveedor
                   inner join productos_marcas m on m.idMarca = p.idMarca
-                  inner join productos_categoria tp on tp.idCategirua = p.idCategoria";
+                  inner join productos_categorias tp on tp.idCategoria = p.idCategoria";
         $sql = fn_EjecutarQuery($query);
 
+        $datos = array();
         while ( $sRow = fn_ExtraerQuery($sql) ){
             $datos[] = $sRow;
         }
