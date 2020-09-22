@@ -45,7 +45,7 @@ class Proveedor
     }
 
     function listadoCombo() {
-        $query = "select * from productos_proveedores  where estadoProveedor = 1";
+        $query = "select * from productos_proveedores";
         $sql = fn_EjecutarQuery($query);
 
         while ( $sRow = fn_ExtraerQuery($sql) ){

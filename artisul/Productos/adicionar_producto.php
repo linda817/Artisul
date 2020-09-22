@@ -65,7 +65,7 @@ if($submit == 1){
             <div class="container no-gutters manual-gutters">
                 <input type="hidden" name="submit" value="1">
 
-                <div class="row">
+                <div class="container row">
 
                     <div class="row col-md-6">
                         <h2 class="titulo-azul general-margen">General</h2>
@@ -141,7 +141,7 @@ if($submit == 1){
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="container row">
                     <div class="row col-md-6">
                         <h2 class="titulo-azul margin-modif" >Costo y Manejo</h2>
 
@@ -156,15 +156,14 @@ if($submit == 1){
 
                         <div class="form-group row">
                             <div class="col-3">
-                                <label>Marca</label>
+                                <label>Proveedor</label>
                             </div>
                             <div class="col-9">
-                                <select name="idMarcaProducto" id="idMarcaProducto" class="form-control">
+                                <select name="idProveedor" id="idProveedor" class="form-control">
                                     <?php
-                                    //Aqui es para que aparezcan en listado todos los proveedores.
                                     $Proveedor = new Proveedor();
                                     $listado = $Proveedor->listadoCombo();
-                                    foreach ($listado as $item){
+                                    foreach ($listado as $item) {
                                         ?>
                                         <option value="<?=$item['idProveedor']?>"><?=$item['nombreProveedor']?></option>
                                         <?php
@@ -185,7 +184,6 @@ if($submit == 1){
                     </div>
                 </div>
             </div>
-
             <div class="form-group botones-agregar-producto">
                 <button type="submit" class="btn btn-primary">Guardar Datos</button>
                 <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>

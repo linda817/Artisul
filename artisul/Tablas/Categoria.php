@@ -43,7 +43,7 @@ class Categoria
     }
 
     function listadoCombo() {
-        $query = "select * from productos_categorias where estadoCategoria = 1";
+        $query = "select * from productos_categorias";
         $sql = fn_EjecutarQuery($query);
 
         while ( $sRow = fn_ExtraerQuery($sql) ){

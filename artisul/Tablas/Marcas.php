@@ -42,7 +42,7 @@ class Marcas
     }
 
     function listadoCombo() {
-        $query = "select * from productos_marcas where estadoMarca = 1";
+        $query = "select * from productos_marcas";
         $sql = fn_EjecutarQuery($query);
 
         while ( $sRow = fn_ExtraerQuery($sql) ){

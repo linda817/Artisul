@@ -82,7 +82,7 @@ class Producto {
 //NO TENEMOS ESTADO DE PRODUCTO ASI QUE NO SE QUE IRIA AQUI ENVEZ DE ESTO (ESTO LO HICIMOS EN CLASE)
 //AYUDA//
     function listadoCombo() {
-        $query = "select * from productos where estadoProducto = 1";
+        $query = "select * from productos";
         $sql = fn_EjecutarQuery($query);
 
         while ( $sRow = fn_ExtraerQuery($sql) ){
@@ -106,8 +106,8 @@ class Producto {
                   nombreProducto = '$this->nombreProducto',
                   costoProducto = '$this->costoProducto',
                   descripcionProducto = '$this->descripcionProducto',
-                  cantidadProducto = '$this->cantidadDisponible',
-                  idProveedor = '$this->iPproveedor',
+                  cantidadProducto = '$this->cantidadProducto',
+                  idProveedor = '$this->idProveedor',
                   idMarca = '$this->idMarca',
                   idCategoria = '$this->idCategoria'
                   where idProducto = ".$this->idProducto."
