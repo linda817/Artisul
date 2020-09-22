@@ -1,5 +1,4 @@
 <?php
-
 require_once ('../Tablas/Categoria.php');
 require_once ('../Tablas/Marcas.php');
 require_once ('../Tablas/Producto.php');
@@ -18,12 +17,10 @@ if($submit == 1){
     $Producto->descripcionProducto = $_POST['descripcionProducto'];
     $Producto->cantidadProducto = $_POST['cantidadProducto'];
     $Producto->idProveedor = $_POST['idProveedor'];
-    $Producto->idCategoria= $_POST['idCategoria'];
-    $Producto->idMarca  = $_POST['idMarca'];
+    $Producto->idCategoria = $_POST['idCategoria'];
+    $Producto->idMarca = $_POST['idMarca'];
 
     $agregar = $Producto->insertar();
-
-    exit();
 
     if($agregar == 0){
         header("Location: manejo_inventario.php");
@@ -64,17 +61,16 @@ if($submit == 1){
     </section>
 
     <section id="agregar">
-        <div class="container no-gutters manual-gutters">
-
-            <form name="agregar" id="agregar" action="" method="post">
-                    <input type="hidden" name="submit" value="1">
+        <form name="agregar" id="agregar" action="" method="post">
+            <div class="container no-gutters manual-gutters">
+                <input type="hidden" name="submit" value="1">
 
                 <div class="row">
 
-                    <div class="form-group col-md-6">
+                    <div class="row col-md-6">
                         <h2 class="titulo-azul general-margen">General</h2>
 
-                        <div class="row">
+                        <div class="form-group row">
                             <div class="col-3">
                                 <label>Nombre</label>
                             </div>
@@ -83,13 +79,12 @@ if($submit == 1){
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="form-group row">
                             <div class="col-3">
                                 <label>Marca</label>
                             </div>
                             <div class="col-9">
                                 <select name="idMarca" id="idMarca" class="form-control">
-
                                     <?php
                                     //Aqui es para que aparezcan en listado todas las categorias.
                                     $Marca = new Marcas();
@@ -97,39 +92,34 @@ if($submit == 1){
                                     foreach ($listado as $item){
                                         ?>
                                         <option value="<?=$item['idMarca']?>"><?=$item['nombreMarca']?></option>
-                                    <?php
-                                        }
+                                        <?php
+                                    }
                                     ?>
-
                                 </select>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="form-group row">
                             <div class="col-3">
                                 <label>Categoría</label>
                             </div>
                             <div class="col-9">
                                 <select name="idCategoria" id="idCategoria" class="form-control">
-
                                     <?php
                                     //Aqui es para que aparezcan en listado todas las categorias.
-                                    /*
-                                    $Proveedor = new Proveedor();
-                                    $listado = $Proveedor->listadoCombo();
+                                    $Categoria= new Categoria();
+                                    $listado = $Categoria->listadoCombo();
                                     foreach ($listado as $item){
                                         ?>
-                                        <option value="<?=$item['idProveedor']?>"><?=$item['nombreProveedor']?></option>
-                                    <?php
-                                        }
-                                    */
+                                        <option value="<?=$item['idCategoria']?>"><?=$item['nombreCategoria']?></option>
+                                        <?php
+                                    }
                                     ?>
-
                                 </select>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="form-group row">
                             <div class="col-3">
                                 <label>Descripción</label>
                             </div>
@@ -150,83 +140,65 @@ if($submit == 1){
                             <button type="submit" class="btn btn-primary btn-add clear">Clean</button>
                         </div>
                     </div>
-
                 </div>
+                <div class="row">
+                    <div class="row col-md-6">
+                        <h2 class="titulo-azul margin-modif" >Costo y Manejo</h2>
 
-            </form>
-
-
-
-            <form name="agregar" id="agregar" action="" method="post" class="costo">
-                <input type="hidden" name="submit" value="1">
-
-                    <div class="row">
-
-                        <div class="form-group col-md-6">
-                            <h2 class="titulo-azul margin-modif" >Costo y Manejo</h2>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <label>Costo</label>
-                                </div>
-                                <div class="col-9">
-                                    <input type="number" name="costoProducto" id="costoProducto" class="form-control">
-                                </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label>Costo</label>
                             </div>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <label>Proveedor</label>
-                                </div>
-                                <div class="col-9">
-                                    <select name="idProveedor" id="idProveedor" class="form-control">
-
-                                        <?php
-                                        //Aqui es para que aparezcan en listado todos los proveedores.
-                                        /*$Proveedor = new Proveedor();
-                                        $listado = $Proveedor->listadoCombo();
-                                        foreach ($listado as $item){
-                                            ?>
-                                            <option value="<?=$item['idProveedor']?>"><?=$item['nombreProveedor']?></option>
-                                        <?php
-                                            }
-                                        */?>
-
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <label>Cantidad</label>
-                                </div>
-                                <div class="col-9">
-                                    <input type="number" name="cantidadProducto" id="cantidadProducto" class="form-control">
-                                </div>
+                            <div class="col-9">
+                                <input type="number" name="costoProducto" id="costoProducto" class="form-control">
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label>Marca</label>
+                            </div>
+                            <div class="col-9">
+                                <select name="idMarcaProducto" id="idMarcaProducto" class="form-control">
+                                    <?php
+                                    //Aqui es para que aparezcan en listado todos los proveedores.
+                                    $Proveedor = new Proveedor();
+                                    $listado = $Proveedor->listadoCombo();
+                                    foreach ($listado as $item){
+                                        ?>
+                                        <option value="<?=$item['idProveedor']?>"><?=$item['nombreProveedor']?></option>
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label>Cantidad</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="number" name="cantidadProducto" id="cantidadProducto" class="form-control">
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-
+            <div class="form-group botones-agregar-producto">
+                <button type="submit" class="btn btn-primary">Guardar Datos</button>
+                <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
+            </div>
         </form>
-
-        </div>
-
-        <div class="form-group botones-agregar-producto">
-            <button type="submit" class="btn btn-primary">Guardar Datos</button>
-            <a href="manejo_inventario.php" class="btn btn-dark">Cancelar</a>
-        </div>
-
     </section>
 
-
-
-
-
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
 
 </body>
 </html>
