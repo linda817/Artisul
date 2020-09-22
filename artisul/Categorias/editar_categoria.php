@@ -59,31 +59,27 @@ if($submit == 1){
         <div class="container no-gutters manual-gutters">
 
             <form name="agregar" id="agregar" action="" method="post">
-                    <input type="hidden" name="submit" value="1">
+                <input type="hidden" name="submit" value="1">
+                <h2 class="titulo-azul general-margen">Información General</h2>
+                    <div class="form-group col-md-3">
+                        <label>Nombre</label>
+                        <input type="text" name="nombreCategoria" id="nombreCategoria" class="form-control" required>
+                    </div>
 
-                        <h2 class="titulo-azul general-margen">Información General</h2>
-
-
-                                <div class="form-group col-md-3">
-                                    <label>Nombre</label>
-                                    <input type="text" name="nombreCategoria" id="nombreCategoria" class="form-control" required>
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label>Estado</label>
-                                    <select name="estadoCategoria" id="estadoCategoria" class="form-control">
-                                        <option value="1">Activo</option>
-                                        <option value="0">Inactivo</option>
-                                    </select>
-                                </div>
+                    <div class="form-group col-md-6">
+                        <label>Estado</label>
+                        <select name="estadoCategoria" id="estadoCategoria" class="form-control">
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
+                    </div>
 
                 <div class="form-group botones-agregar">
                     <button type="submit" class="btn btn-primary">Guardar Datos</button>
                     <a href="../Categorias/index.php" class="btn btn-dark">Cancelar</a>
                 </div>
 
-        </form>
-
+            </form>
         </div>
     </section>
 
