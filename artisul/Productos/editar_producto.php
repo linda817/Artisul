@@ -26,7 +26,7 @@ if($submit == 1){
     $Producto->idMarca = $_POST['idMarca'];
 
     $editar = $Producto->actualizar();
-    
+
     if($editar == 0) {
         header("Location: manejo_inventario.php");
     }
