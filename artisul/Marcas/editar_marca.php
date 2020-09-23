@@ -1,28 +1,37 @@
 <?php
-/*
-require_once ('../tablas/Categoria.php');
-require_once ('../tablas/Marcas.php');
-require_once ('../tablas/Producto.php');
-require_once ('../tablas/Proveedor.php');
+require_once ('../Tablas/Marcas.php');
+$Marcas = new Marcas();
 
-$Categoria = new Categoria();
+$idMarca = $_GET['id'];
 
-$submit = $_POST['submit'];
+$info = $Marcas->obtenerInfo($idMarca);
+
+$selectedActivo = "";
+if ($info['estadoMarca'] == 1) {
+    $selectedActivo = "selected";
+}
+$selectedInactivo = "";
+if ($info['estadoMarca'] == 0) {
+    $selectedInactivo = "selected";
+}
+
+$submit = 0;
+if (isset($_POST['submit'])){
+    $submit = $_POST['submit'];
+}
 if($submit == 1){
-    //Agregar
-    $Marca->idCategoria = $_POST['idCategoria'];
-    $Marca->nombreCategoria = $_POST['nombreCategoria'];
-    $Marca->estadoCategoria = $_POST['estadoCategoria'];
+    //Actualizar
+    $Marcas->idMarca = $idMarca;
+    $Marcas->nombreMarca = $_POST['nombreMarca'];
+    $Marcas->estadoMarca = $_POST['estadoMarca'];
 
+    $actualizar = $Marcas->actualizar();
 
-    $agregar = $Categoria->insertar();
-
-    if($agregar == 0){
-        header("Location: manejo_inventario.php");
+    if($actualizar == 0) {
+        header("Location: index.php");
     }
 
 }
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,20 +75,21 @@ if($submit == 1){
 
             <div class="form-group col-md-3">
                 <label>Nombre</label>
-                <input type="text" name="nombreMarca" id="nombreMarca" class="form-control" required>
+                <input type="text" name="nombreMarca" id="nombreMarca" class="form-control" required
+                       value="<?php echo $info['nombreMarca'] ?>">
             </div>
 
             <div class="form-group col-md-6">
                 <label>Estado</label>
                 <select name="estadoMarca" id="estadoMarca" class="form-control">
-                    <option value="1">Activo</option>
-                    <option value="0">Inactivo</option>
+                    <option value="1" <?= $selectedActivo ?>>Activo</option>
+                    <option value="0" <?= $selectedInactivo ?>>Inactivo</option>
                 </select>
             </div>
 
             <div class="form-group botones-agregar">
                 <button type="submit" class="btn btn-primary">Guardar Datos</button>
-                <a href="../Marcas/index.php" class="btn btn-dark">Cancelar</a>
+                <a href="index.php" class="btn btn-dark">Cancelar</a>
             </div>
 
         </form>
@@ -88,8 +98,12 @@ if($submit == 1){
 </section>
 
 
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+<script src="../js/scripts.js"></script>
 
 </body>
 </html>

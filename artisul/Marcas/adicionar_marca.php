@@ -1,28 +1,25 @@
 <?php
-/*
-require_once ('../tablas/Categoria.php');
-require_once ('../tablas/Marcas.php');
-require_once ('../tablas/Producto.php');
-require_once ('../tablas/Proveedor.php');
+require_once ('../Tablas/Marcas.php');
 
-$Categoria = new Categoria();
+$Marcas = new Marcas();
 
-$submit = $_POST['submit'];
+$submit = 0;
+if (isset($_POST['submit'])){
+    $submit = $_POST['submit'];
+}
 if($submit == 1){
     //Agregar
-    $Marca->idCategoria = $_POST['idCategoria'];
-    $Marca->nombreCategoria = $_POST['nombreCategoria'];
-    $Marca->estadoCategoria = $_POST['estadoCategoria'];
+    $Marcas->nombreMarca = $_POST['nombreMarca'];
+    $Marcas->estadoMarca = $_POST['estadoMarca'];
+
+    $agregar = $Marcas->insertar();
 
 
-    $agregar = $Categoria->insertar();
-
-    if($agregar == 0){
-        header("Location: manejo_inventario.php");
+    if($agregar == 0) {
+        header("Location: index.php");
     }
 
 }
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,48 +45,51 @@ if($submit == 1){
 
 
 <body>
-<section id="add">
-    <div class="card mb-4">
-        <div class="card-header">
-            <span class="titulo-artisul font-weight-bold">Agregar Marca</span>
+    <section id="add">
+        <div class="card mb-4">
+            <div class="card-header">
+                <span class="titulo-artisul font-weight-bold">Agregar Marca</span>
+            </div>
+    </section>
+
+    <section id="agregar">
+        <div class="container no-gutters manual-gutters">
+
+            <form name="agregar" id="agregar" action="" method="post">
+                <input type="hidden" name="submit" value="1">
+
+                <h2 class="titulo-azul general-margen">Información General</h2>
+
+
+                <div class="form-group col-md-3">
+                    <label>Nombre</label>
+                    <input type="text" name="nombreMarca" id="nombreMarca" class="form-control" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Estado</label>
+                    <select name="estadoMarca" id="estadoMarca" class="form-control">
+                        <option value="1">Activo</option>
+                        <option value="0">Inactivo</option>
+                    </select>
+                </div>
+
+                <div class="form-group botones-agregar">
+                    <button type="submit" class="btn btn-primary">Guardar Datos</button>
+                    <a href="index.php" class="btn btn-dark">Cancelar</a>
+                </div>
+
+            </form>
+
         </div>
-</section>
+    </section>
 
-<section id="agregar">
-    <div class="container no-gutters manual-gutters">
-
-        <form name="agregar" id="agregar" action="" method="post">
-            <input type="hidden" name="submit" value="1">
-
-            <h2 class="titulo-azul general-margen">Información General</h2>
-
-
-            <div class="form-group col-md-3">
-                <label>Nombre</label>
-                <input type="text" name="nombreMarca" id="nombreMarca" class="form-control" required>
-            </div>
-
-            <div class="form-group col-md-6">
-                <label>Estado</label>
-                <select name="estadoMarca" id="estadoMarca" class="form-control">
-                    <option value="1">Activo</option>
-                    <option value="0">Inactivo</option>
-                </select>
-            </div>
-
-            <div class="form-group botones-agregar">
-                <button type="submit" class="btn btn-primary">Guardar Datos</button>
-                <a href="index.php" class="btn btn-dark">Cancelar</a>
-            </div>
-
-        </form>
-
-    </div>
-</section>
-
-
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
 
 </body>
 </html>
